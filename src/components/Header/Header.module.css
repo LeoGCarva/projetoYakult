@@ -1,0 +1,23 @@
+.pageHeader {
+  display: flex;
+  position: relative;
+  left: -1px;
+  width: 100%;
+
+  padding: 0 3rem;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--pink-100);
+}
+
+.pageHeader > img {
+  width: 6rem;
+  height: 3rem;
+
+  margin: 1rem .5rem;
+}
+
+@media (max-width: 1000px) {
+  .pageHeader {
+    justify-content: center;
+  }
+}
