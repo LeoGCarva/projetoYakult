@@ -1,13 +1,21 @@
 .container {
   display: flex;
+  align-items: center;
   justify-content: space-around;
   border-radius: 50px;
   margin-top: 1.5rem;
   padding: 1.5rem 0;
 
-  width: 100%;
+  width: 40%;
 
   background-color: var(--light);
+  border: 1px solid var(--gray-100);
+}
+
+@media (max-width: 1000px) {
+  .container {
+    width: 100%;
+  }
 }
 
 button {
