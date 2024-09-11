@@ -1,6 +1,7 @@
 import { Header } from './components/Header';
 import { Navbar } from './components/Navbar';
 import { Markets } from './components/Markets';
+import { Footer } from './components/Footer';
 import styles from './App.module.css';
 
 export function App() {
@@ -16,7 +17,10 @@ export function App() {
           <Markets />
           <Markets />
         </div>
+        
       </div>
+
+      <Footer />
     </div>
   )
 }
