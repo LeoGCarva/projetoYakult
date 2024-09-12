@@ -71,3 +71,36 @@
   font-size: 2rem;
   margin-bottom: .5rem;
 }
+
+@media (max-width: 900px) {
+  .footerArea {
+    width: 100%;
+    height: auto;
+
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: center;
+    grid-template-rows: 2fr 1fr auto;
+    grid-template-areas:
+      'part1'
+      'none'
+      'part2';
+
+    margin-top: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .iconsArea {
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  .contact {
+    align-items: center;
+  }
+}

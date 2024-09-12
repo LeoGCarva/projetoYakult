@@ -15,8 +15,7 @@ export function Markets() {
         <div className={styles.storeInfo}>
           <h2>Nome da loja</h2>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel,
-            corporis totam sint, consectetur nemo inventore error molestias
+            Lorem ipsum dolor sit
           </p>
         </div>
 

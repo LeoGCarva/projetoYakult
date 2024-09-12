@@ -10,7 +10,9 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 export function Footer() {
   return (
     <footer className={styles.footerArea}>
+
       <div className={styles.links}>
+
         <div className={styles.contact}>
           <h1>Get in Touch</h1>
           <p>About Us</p>
@@ -25,13 +27,7 @@ export function Footer() {
           <p>Privacy Policy</p>
           <p>FAQ</p>
         </div>
-        <div className={styles.contact}>
-          <h1>Get in Touch</h1>
-          <p>About Us</p>
-          <p>Our Services</p>
-          <p>Privacy Policy</p>
-          <p>FAQ</p>
-        </div>
+
       </div>
 
       <div className={styles.iconsArea}>
@@ -46,6 +42,7 @@ export function Footer() {
       <div className={styles.card1}>
         <FaLaptopCode className={styles.card1Img} /> L & G
       </div>
+      
     </footer>
   );
 }
