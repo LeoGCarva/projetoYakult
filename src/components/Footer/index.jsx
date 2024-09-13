@@ -40,9 +40,9 @@ export function Footer() {
       </div>
 
       <div className={styles.card1}>
-        <FaLaptopCode className={styles.card1Img} /> L & G
+        <FaLaptopCode className={styles.card1Img} /> L & G 
       </div>
-      
+
     </footer>
   );
 }

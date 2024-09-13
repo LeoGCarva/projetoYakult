@@ -11,6 +11,19 @@
   border: 1px solid var(--light);
 }
 
+.marketContainerFocus {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: .5rem 1rem;
+  gap: .5rem;
+
+  background-color: var(--light);
+  border-radius: 10px;
+  border: 1px solid var(--red);
+}
+
 .marketContainer:hover {
   cursor: pointer;
   border: 1px solid var(--pink-500);

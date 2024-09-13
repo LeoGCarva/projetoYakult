@@ -3,9 +3,9 @@ import { SlArrowRight } from "react-icons/sl";
 
 import styles from "./Markets.module.css";
 
-export function Markets() {
+export function Markets({ id, name, local, handleStoreName, settedStoreName }) {
   return (
-    <div className={styles.marketContainer}>
+    <div onClick={() => handleStoreName(name)} className={settedStoreName === name ? styles.marketContainerFocus : styles.marketContainer}>
       <div className={styles.store}>
 
         <div className={styles.storeImg}>
@@ -13,9 +13,9 @@ export function Markets() {
         </div>
 
         <div className={styles.storeInfo}>
-          <h2>Nome da loja</h2>
+          <h2>{name}</h2>
           <p>
-            Lorem ipsum dolor sit
+            {local}
           </p>
         </div>
 

@@ -1,4 +1,7 @@
 .footerArea {
+position: relative;
+bottom: -1px;
+
   height: 10rem;
   width: 100%;
 
