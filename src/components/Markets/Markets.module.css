@@ -11,6 +11,16 @@
   border: 1px solid var(--light);
 }
 
+@media (max-width: 900px) {
+  .marketContainer {
+    width: 100%;
+  }
+
+  .marketContainerFocus {
+    width: 100%;
+  }
+}
+
 .marketContainerFocus {
   display: flex;
   align-items: center;

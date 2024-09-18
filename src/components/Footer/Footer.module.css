@@ -1,6 +1,6 @@
 .footerArea {
-position: relative;
-bottom: -1px;
+  position: relative;
+  bottom: -1px;
 
   height: 10rem;
   width: 100%;
@@ -12,6 +12,12 @@ bottom: -1px;
 
   margin-top: 1rem;
   padding: 1rem 2rem;
+}
+
+@media (min-width: 900px) {
+  .footerArea {
+    bottom: -22.5rem;
+  }
 }
 
 .links {

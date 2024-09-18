@@ -1,3 +1,7 @@
+.wrapperBodyApp {
+  height: 100vh;
+}
+
 .bodyApp {
   display: flex;
   align-items: center;
@@ -6,6 +10,12 @@
 
   padding: 0 5rem;
   gap: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .bodyApp {
+    padding: 0 .5rem;
+  }
 }
 
 .content {
@@ -20,6 +30,7 @@
 
   padding: .5rem 1rem;
   gap: 1rem;
+  align-items: center;
 }
 
 @media (max-width: 900px) {
@@ -48,16 +59,17 @@
   }
 }
 
-button {
+.shop, .products, .changes {
   padding: 5px 10px;
   border: none;
   border-radius: 50px;
+  background: none;
 
   cursor: pointer;
   font-size: 1.5rem;
 }
 
-button:focus {
+.shop:focus, .products:focus, .changes:focus {
   color: var(--red);
 }
 
@@ -117,3 +129,89 @@ button:focus {
 .arrowProduct {
   background-color: var(--white);
 }
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+}
+
+.name {
+  font-size: 1.4rem;
+  color: var(--dark);
+}
+
+.price, .amount {
+  color: var(--gray);
+}
+
+.input {
+  font-size: 1.2rem;
+  max-width: 9rem;
+  margin-left: .5rem;
+  border-radius: 10px;
+  border: 1px solid var(--pink-100);
+  text-align: center;
+}
+
+.input:focus {
+  outline: none;
+  border: 1px solid var(--red);
+}
+
+.btnFinishOrder {
+  padding: .5rem 2rem;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--red-100);
+  color: white;
+}
+
+.btnFinishOrder:hover {
+  background-color: var(--red);
+}
+
+.wrapperOrder {
+  width: 100%;
+  text-align: center;
+
+  display: grid;
+  grid-template-rows: 2fr 1fr auto;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  'row1 row1 row1 row1'
+  'colum1 colum2 colum3 colum4'
+  'row3 row3 row3 row3'
+}
+
+.wrapperOrder > h2 {
+  grid-area: row1;
+}
+
+.wrapperOrderReceipt {
+  grid-area: row3;
+}
+
+.orderReceipt {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas:
+  'colum5 colum6 colum7 colum8';
+  place-items: center;
+
+  border-bottom: 1px dashed var(--gray-200);
+  padding: 1rem;
+}
+
+.descAmount, .descName, .descPrice, .descTotal {
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-bottom: 1px solid var(--gray-200);
+  padding-bottom: .2rem;
+}
+
+

@@ -107,7 +107,7 @@ export function App() {
   }
 
   return (
-    <div>
+    <div className={styles.wrapperBodyApp}>
       <Header />
       {/* --NavBar------------------------------------------------ */}
       <div className={styles.bodyApp}>
@@ -149,15 +149,24 @@ export function App() {
         ) : null}
         {step === 1 ? (
           <div className={styles.content}>
-            <button onClick={handleSubmit(finishOrder)}>Finalizar</button>
+            <button
+              onClick={handleSubmit(finishOrder)}
+              className={styles.btnFinishOrder}
+            >
+              Finalizar
+            </button>
             {fieldsProducts.map((field, index) => (
               <div key={field.id} className={styles.productContainer}>
                 <div className={styles.productImg}>
                   <img src={watch(`products.${index}.img`)} alt="" />
                   <div className={styles.productInfo}>
-                    <p>{watch(`products.${index}.name`)}</p>
-                    <p>Preço da unidade: {watch(`products.${index}.price`)}</p>
-                    <p>
+                    <p className={styles.name}>
+                      {watch(`products.${index}.name`)}
+                    </p>
+                    <p className={styles.price}>
+                      Preço da unidade: R${watch(`products.${index}.price`)}
+                    </p>
+                    <p className={styles.amount}>
                       Quantidade:
                       <input
                         onChange={(event) => {
@@ -169,6 +178,7 @@ export function App() {
                         min="0"
                         step="1"
                         {...register(`products.${index}.amount`)}
+                        className={styles.input}
                       />
                     </p>
                   </div>
@@ -178,19 +188,34 @@ export function App() {
             ))}
           </div>
         ) : null}
-        {step === 2 ? <div className={styles.content}>
-          {orders.map((order) => (
-            <div key={order.id} className={styles.orderReceipt}>
-              <p>{order.amount}</p>
-              <p>{order.name}</p>
-              <p>{order.price}</p>
-              <p>{order.totalAmount}</p>
-              <img src={order.img} alt="" />
+
+        {step === 2 ? (
+          <div className={styles.content}>
+            <div className={styles.wrapperOrder}>
+              <h2>Pedidos</h2>
+              <p className={styles.descAmount}>Quantidade</p>
+              <p className={styles.descName}>Nome</p>
+              <p className={styles.descPrice}>Preço</p>
+              <p className={styles.descTotal}>Total</p>
+
+              <div className={styles.wrapperOrderReceipt}>
+                {orders.map((order) => (
+                  <div key={order.id} className={styles.orderReceipt}>
+                    <p className={styles.orderAmount}>{order.amount}</p>
+                    <p className={styles.orderName}>{order.name}</p>
+                    <p className={styles.orderPrice}>R$ {order.price}</p>
+                    <p className={styles.orderTotalAmount}>
+                      R$ {order.totalAmount}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
-          ))}
-        </div> : null}
+          </div>
+        ) : null}
       </div>
       {/* --------------------------------------------------------- */}
+
       <Footer />
     </div>
   );
