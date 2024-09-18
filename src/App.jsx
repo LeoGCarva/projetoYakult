@@ -70,7 +70,7 @@ export function App() {
       },
       {
         id: 2,
-        name: "Yakult 40 ligth",
+        name: "Yakult 40 light",
         price: 2.5,
         img: yakult40Ligth,
         amount: 0,

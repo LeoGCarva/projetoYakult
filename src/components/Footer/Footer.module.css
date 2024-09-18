@@ -89,7 +89,7 @@
     display: grid;
     grid-template-columns: auto;
     justify-content: center;
-    grid-template-rows: 2fr 1fr auto;
+    grid-template-rows: 1fr 1fr auto;
     grid-template-areas:
       'part1'
       'none'

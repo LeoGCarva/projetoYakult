@@ -20,13 +20,6 @@ export function Footer() {
           <p>Privacy Policy</p>
           <p>FAQ</p>
         </div>
-        <div className={styles.contact}>
-          <h1>Get in Touch</h1>
-          <p>About Us</p>
-          <p>Our Services</p>
-          <p>Privacy Policy</p>
-          <p>FAQ</p>
-        </div>
 
       </div>
 
