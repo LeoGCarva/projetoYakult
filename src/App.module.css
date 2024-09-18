@@ -36,6 +36,7 @@
 @media (max-width: 900px) {
   .content {
     flex-direction: column;
+    border: none;
   }
 }
 
